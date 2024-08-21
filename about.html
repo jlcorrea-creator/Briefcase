@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url("Background-Layout/triangular.blue-neon.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+       
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;
+            margin-left: 180px;
+            margin-right: 160px;
+        }
+        .container {
+            width: 400px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .flip-cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Aligns flip cards to the right */
+        }
+        .flip-card {
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            margin-top: 100px; /* Space between cards */
+        }
+        .flip-card-inner {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .flip-card-front { border-radius:5px;
+            background:#0633af;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .flip-card-back {
+            background: none;
+            color: #ffffff; 
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            transform: rotateY(180deg);
+            padding: 10px;
+            font-size-adjust: black 22px;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        header {
+            color: #ffffff;
+            margin-left: 14rem;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0px;
+        }
+        .header-button {
+            padding: 8px;
+            margin-top:4rem;
+            margin-right:14.5rem;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;;
+            background-color: #0633af;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }    
+        .header-button:hover {
+            background:#2d2dac;
+            animation: glow 2s ease-in-out infinite alternate; 
+        } @keyframes glow {
+            100%{background:#021174f5;}
+            75%{background:#4d01ffd0}
+            25%{background:#51015cd0}
+        
+        }
+        .audio-element {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About</h1>
+        <a
+            class="header-button" href="home.html"
+            onclick="playAudio(); alert(Back); return false;"
+        >
+            Return to Space
+        </a>
+    </header>
+
+    <!-- Audio element -->
+    <audio id="audio-player" class="audio-element">
+        <source src="Sound/Clap-Snap.WAV" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio-player');
+            audio.play();
+        }
+    </script>
+    
+    <div class="main-container">
+        <div class="container">
+            <h2>My Artistic Journey</h2>
+            <p>"From a young age, I've always had a unique way of seeing the world. My eyes were drawn to the vivid colors and intricate patterns around me.</p>
+            <p>Art was more than just a hobby—it was a way for me to express the creativity that bubbled up inside me.</p>
+            <p>Whether I was sketching in the margins of my notebooks or crafting little masterpieces from whatever materials I could find, my passion for art was evident.</p>
+            <p>Circumstances, however, often kept me from pursuing art as a full-time profession. Life’s demands led me down different paths, and my artistic journey took a backseat.</p>
+            <p>But the love for creativity never faded. It simmered in the background, waiting for the right moment to burst forth.</p>
+            <p>Now, I’m embracing the opportunity to reconnect with my artistic roots. Through my work, I’m dedicated to leaving a legacy that reflects my lifelong passion for art.</p>
+            <p>Every piece I create is a testament to the years of imagination and inspiration that have shaped me.</p>
+            <p>My art is not just a reflection of my skills, but of a dream that has patiently waited to come to life.</p>
+            <p>I hope my work resonates with you as much as the act of creating it means to me."</p>
+            <h2>My Artistic Ethics</h2>
+            <p>"My commitment is centered on respect, integrity, and responsibility to ensure that my work is both impactful and respectful.</p><p>I strive to foster an environment that values originality, transparency, and cooperative engagement in all artistic endeavors, guided by these principles:</p><p></p>Creativity, Logic, Collaboration, and Honor."</p>
+        </div>
+        
+        <div class="flip-cards-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        Creativity
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"Imagination opens up possibilities that fuel my creativity and lead to the creation of art. I utilize every available tool, adapt to technological advancements, and exchange ideas spontaneously to enhance my creative process."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        Logic
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"I  apply logic as an analogy: just as a musician uses scales and harmonies to evoke emotions, I analyze how various visual elements work together to create an emotional impact. By understanding how people perceive and react to art, I can craft pieces that resonate deeply and meaningfully with viewers."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        Collaboration
+                    </div>
+                    <div class="flip-card-back">
+                       <p>"My extensive experience in the hospitality industry has honed my skills in communication, teamwork, and diversity inclusion, which are essential for understanding human behavior. Insights gained from different backgrounds and traits help me more effectively capture and express the nuances of diverse perspectives and emotions in my art."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        Honor
+                    </div>
+                    <div class="flip-card-back">
+                       <p>"Honor is achieved by making a significant contribution in your own way and showing equal respect for others' individual ideas, opinions, and beliefs."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

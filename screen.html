@@ -87,14 +87,14 @@
         }
 
         .button:focus {
-            outline: 2px solid yellow;
+            outline: 2px solid rgb(255, 255, 255);
         }
 
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const button = document.getElementById('soundButton');
-            const sound = new Audio(""); // Adjust the path as needed
+            const sound = new Audio("../Sound/clap-Snap.WAV"); // Adjust the path as needed
     
             button.addEventListener('click', () => {
                 sound.play();

@@ -16,7 +16,7 @@
     </section>
 </header>
     <style>
-    header {
+    header{
         font-family:system-ui,'Segoe UI','Open Sans';
         font-size: 2rem;
         font-weight: bold;
@@ -24,6 +24,8 @@
         text-decoration:none;
         border-radius: 5px;
         cursor: pointer;
+
+       
     }
     </style>
 
@@ -32,10 +34,10 @@
     <style>
     body {  
         font-family: 'Space Mono', monospace;
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: center;
         margin:20px 100px 50px 100px;
-        color:#9f04f8;
+        color:#04f825;
         background: #1a0585;
         background-image: url("Background-Layout/galaxy.symetric.jpg");
        
@@ -53,13 +55,14 @@
       border: 70px  solid transparent;
     }
     p, h1, h2, footer{
+
       animation: glow 4s ease-in-out infinite alternate;
      
     }
     @keyframes glow {
       from {
         text-shadow:
-        0 0 10px #1202f7, 0 0 20px #1a3cfa, 0 0 30px #070142,
+        0 0 10px #0c00a7, 0 0 20px #0228ff, 0 0 30px #070142,
         0 0 40px #010435, 0 0 50px #050453, 0 0 60px #040529, 0 0 70px #202020;
       }
       to {
@@ -72,7 +75,7 @@
     <p>
         <!-- Welcome Area, typing text-->
        <audio id="audioPlayer1" src="../Sound/typing101.wav" preload="auto"></audio>
-       <audio id="audioPlayer2" src="../Sound/eerie sound.mp3" preload="auto"></audio>
+       <audio id="audioPlayer2" src="../Sound/Lost in space.mp3" preload="auto"></audio>
        <a id="playLink">Hover to play</a>
     </p>
     <script>
@@ -143,7 +146,7 @@
           background:#4c00ff;
           animation: mymove 4s infinite;
           border-radius: 20px;
-          border: 4px solid #4c00ff;
+          border: 4px solid #002fff;
         }
         @keyframes mymove {
           25%{background-color:#252c9bf5;}

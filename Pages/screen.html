@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motion Graphics</title>
+    <meta name="description" content="Showcase of motion graphics, animations, and videos created between 2013 and 2024.">
     <style>
-        body { 
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -13,38 +14,44 @@
             flex-direction: column;
             align-items: center;
             height: 100vh;
-            background:url("../Background-Layout/triangular.blue-neon.jpg");
+            background: url("../Background-Layout/triangular.blue-neon.jpg") no-repeat center center fixed;
+            background-size: cover;
         }
         .header {
-            display:inline-flex;
+            display: inline-flex;
             justify-content: space-between;
             width: 100%;
             padding: 1rem;
-        }
-        p { 
-            text-align: center;
-            line-height: .02rem;
-            color:white;
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, 0.5); /* Optional: Adds a background to the header for better readability */
         }
         .title {
-            color:white;
-            font-size: 1.8rem; 
+            color: white;
+            font-size: 1.8rem;
             font-weight: bold;
             margin-left: 5%;
-            
-        
         }
         .button {
             background-color: blue;
             color: white;
             border: none;
-            padding: .5rem 1rem;
+            padding: 0.5rem 1rem;
             text-align: center;
             text-decoration: none;
             font-size: 1rem;
-            font-weight:bold;
+            font-weight: bold;
             cursor: pointer;
             border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: darkblue;
+        }
+        .button:active {
+            background-color: navy;
+        }
+        .button:focus {
+            outline: 2px solid white;
         }
         .container {
             display: flex;
@@ -52,6 +59,7 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem;
+            box-sizing: border-box;
         }
         iframe, video {
             width: 100%;
@@ -63,36 +71,57 @@
                 height: 200px;
             }
         }
-
-        .button {
-             background-color: blue;
-             color: white;
-             border: none;
-             padding: .5rem 1rem;
-             text-align: center;
-             text-decoration: none;
-             font-size: 1rem;
-             font-weight: bold;
-             cursor: pointer;
-             border-radius: 4px;
-             transition: background-color 0.3s ease;
+        p {
+            text-align: center;
+            line-height: 1.5;
+            color: white;
         }
-
-        .button:hover {
-             background-color: darkblue;
-        }
-
-        .button:active {
-            background-color: navy;
-        }
-
-        .button:focus {
-            outline: 2px solid rgb(255, 255, 255);
-        }
-
     </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">Motion Graphics</div>
+        <a href="home.html" class="button" id="soundButton">Back to Space</a>
+    </div>
+
+    <div class="container">
+        <iframe src="https://drive.google.com/file/d/1J6te2mum20R-xyXSQEBimmshp8TOBvkB/preview" frameborder="0" allowfullscreen></iframe>
+        <p>Between February and March 2024, I started this 2D animation using Synfig Studio, an open-source software.</p><p> I gradually improved as I became more familiar with the tool, but I put it on hold to pursue a course in graphic design in April.</p>
+        <iframe src="https://drive.google.com/file/d/13Pw9bva5f_WwTgz_T1qyVsrwa55FrBnu/preview" frameborder="0" allowfullscreen></iframe>
+        <p>I even designed a house plan using a 3D modeling software that I downloaded just to try for this project, on April 28, 2013.</p>
+        <iframe src="https://drive.google.com/file/d/1Z31t9J1b7CtZltB_NWJsINdq78Vdz511/preview" frameborder="0" allowfullscreen></iframe>
+        <p>Movie Maker was part of the Windows Vista installation on my laptop,</p><p> and this was perhaps my first experience with full video editing at that time, on March 8, 2013.</p>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F1518472578672085%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+        <p>My Signature. Motion Graphics to introduce anaglyph print on shirt, November 28, 2022.</p>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F3015366818721900%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+        <p>Second Motion Graphics for Think Impress, September 2, 2021.</p>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F215553653743720%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+        <p>First Motion Graphics for Think Impress, August 17, 2021.</p>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=329&href=https%3A%2F%2Fwww.facebook.com%2Fjerry.correa2%2Fvideos%2F4342816819064407%2F&show_text=false&width=560&t=0" width="560" height="329" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+        <p>In the advent of smartphones, their apps will definitely entice you to try them out. I did this using YouCut, on June 12, 2021.</p>
+        <video controls>
+            <source src="../Gallery/animation-planning.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>If you recall, in the past, one of your classmates might have flipped their notebook to show their animation. I was one of those who did that too.</p>
+        <video controls>
+            <source src="../Gallery/Experiment_Flipaclip_2D_animation,10-30-2021.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>So, when I came across another app named FlipaClip, I decided to try it as well.</p>
+        <video controls>
+            <source src="../Gallery/Me_Experiment_Flipaclip_2D_animation,9-30-2021.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>This time, I created a 2D animation on a smartphone—imagine doing that on a 7-inch phone.</p>
+        <video controls>
+            <source src="../Gallery/50th Birthday Celebration.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             const button = document.getElementById('soundButton');
             const sound = new Audio("../Sound/clap-Snap.WAV"); // Adjust the path as needed
     
@@ -101,45 +130,5 @@
             });
         });
     </script>
-    
-</head>
-<body>
-    <div class="header">
-        <div class="title">Motion Graphics</div>
-        <a href="home.html" class="button" id="soundButton">Back to Space</a>
-    </div>
-    
-    <div class="container">
-        <iframe src="https://drive.google.com/file/d/1J6te2mum20R-xyXSQEBimmshp8TOBvkB/preview" frameborder="0" allowfullscreen></iframe>
-        <p>Between February and March 2024,I started this 2D animation using Synfig Studio,</p><p>an open-source software. I gradually improved as I became more familiar with the tool,</p><p> but I put it on hold to pursue a course in graphic design in April.</p>
-        <iframe src="https://drive.google.com/file/d/13Pw9bva5f_WwTgz_T1qyVsrwa55FrBnu/preview" frameborder="0" allowfullscreen></iframe>
-        <p>I even designed a house plan using a 3D modeling software that I downloaded</p><p> just to try for this project, on April 28, 2013.</p>
-        <iframe src="https://drive.google.com/file/d/1Z31t9J1b7CtZltB_NWJsINdq78Vdz511/preview" frameborder="0" allowfullscreen></iframe>
-        <p>Movie Maker was part of the Windows Vista installation on my laptop,</p><p> and this was perhaps my first experience with full video editing at that time, on March 8,2013</p>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F1518472578672085%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe> 
-        <p>My Signature. Motion Graphics to introduce anaglyph print on shirt, November 28, 2022</p>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F3015366818721900%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <p>Second Motion Graphics for Think Impress, September 2,2021</p>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FThinkImpress%2Fvideos%2F215553653743720%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <p>First Motion Graphics for Think Impress, August 17, 2021</p>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=329&href=https%3A%2F%2Fwww.facebook.com%2Fjerry.correa2%2Fvideos%2F4342816819064407%2F&show_text=false&width=560&t=0" width="560" height="329" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        <p>In the advent of smartphones, their apps will definitely entice you to try them out.</p><p> I did this using YouCut, on June 12,2021.</p>
-        <video controls>
-            <source src="../Gallery/animation-planning.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video><p>If you recall, in the past, one of your classmates might have flipped their notebook to show their animation.</p><p> I was one of those who did that too.</p>
-        <video controls>
-            <source src="../Gallery/Experiment_Flipaclip_2D_animation,10-30-2021.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video><p>So, when I came across another app named FlipaClip, I decided to try it as well.</p>
-        <video controls>
-            <source src="../Gallery/Me_Experiment_Flipaclip_2D_animation,9-30-2021.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video><p>This time, I created a 2D animation on a smartphone—imagine doing that on a 7-inch phone.</p>
-        <video controls>
-            <source src="../Gallery/50th Birthday Celebration.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
 </body>
 </html>

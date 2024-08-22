@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: url("Background-Layout/triangular.blue-neon.jpg");
+            background-image: url("../Background-Layout/triangular.blue-neon.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -36,13 +36,13 @@
         .flip-cards-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-end; /* Aligns flip cards to the right */
+            align-items: flex-end;
         }
         .flip-card {
             width: 300px;
             height: 200px;
             perspective: 1000px;
-            margin-top: 100px; /* Space between cards */
+            margin-top: 100px;
         }
         .flip-card-inner {
             width: 100%;
@@ -54,7 +54,7 @@
             transform: rotateY(180deg);
         }
         .flip-card-front, .flip-card-back {
-            position:absolute;
+            position: absolute;
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
@@ -63,84 +63,76 @@
             align-items: center;
             color: #ffffff;
         }
-        .flip-card-front { border-radius:5px;
-            background:#0633af;
+        .flip-card-front {
+            border-radius: 5px;
+            background: #0633af;
             font-size: 40px;
             font-weight: bold;
         }
         .flip-card-back {
             background: none;
             color: #ffffff; 
-            justify-content: center;
-            display: flex;
-            align-items: center;
             font-size: 20px;
             transform: rotateY(180deg);
             padding: 10px;
-            font-size-adjust: black 22px;
         }
-    </style>
-</head>
-<body>
-    <style>
         header {
             color: #ffffff;
             margin-left: 14rem;
-            display:flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-            padding:0px;
+            padding: 0px;
         }
         .header-button {
             padding: 8px;
-            margin-top:4rem;
-            margin-right:14.5rem;
+            margin-top: 4rem;
+            margin-right: 14.5rem;
             font-size: 18px;
             font-weight: bold;
-            color: #ffffff;;
+            color: #ffffff;
             background-color: #0633af;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
         }    
         .header-button:hover {
-            background:#2d2dac;
-            animation: glow 2s ease-in-out infinite alternate; 
-        } @keyframes glow {
-            100%{background:#021174f5;}
-            75%{background:#4d01ffd0}
-            25%{background:#51015cd0}
-        
+            background: #2d2dac;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            100% { background: #021174f5; }
+            75% { background: #4d01ffd0; }
+            25% { background: #51015cd0; }
         }
         .audio-element {
             display: none;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>About</h1>
-        <a
-            class="header-button" href="home.html"
-            onclick="playAudio(); alert(Back); return false;"
-        >
-            Return to Space
-        </a>
-    </header>
+<header>
+    <h1>About</h1>
+    <a class="header-button" href="home.html" onclick="playAudio();">
+        Return to Space
+    </a>
+</header>
 
-    <!-- Audio element -->
-    <audio id="audio-player" class="audio-element">
-        <source src="Sound/Clap-Snap.WAV" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+<!-- Audio element -->
+<audio id="audio-player" class="audio-element">
+    <source src="../Sound/Clap-Snap.WAV" type="audio/wav">
+    Your browser does not support the audio element.
+</audio>
 
-    <script>
-        function playAudio() {
-            var audio = document.getElementById('audio-player');
-            audio.play();
-        }
-    </script>
-    
+<script>
+    function playAudio() {
+        var audio = document.getElementById('audio-player');
+        audio.play();
+        // Delay the navigation to allow the audio to start playing
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 100); // Adjust the delay as needed
+    }
+</script>
     <div class="main-container">
         <div class="container">
             <h2>My Artistic Journey</h2>
@@ -154,7 +146,9 @@
             <p>My art is not just a reflection of my skills, but of a dream that has patiently waited to come to life.</p>
             <p>I hope my work resonates with you as much as the act of creating it means to me."</p>
             <h2>My Artistic Ethics</h2>
-            <p>"My commitment is centered on respect, integrity, and responsibility to ensure that my work is both impactful and respectful.</p><p>I strive to foster an environment that values originality, transparency, and cooperative engagement in all artistic endeavors, guided by these principles:</p><p></p>Creativity, Logic, Collaboration, and Honor."</p>
+            <p>"My commitment is centered on respect, integrity, and responsibility to ensure that my work is both impactful and respectful.</p>
+            <p>I strive to foster an environment that values originality, transparency, and cooperative engagement in all artistic endeavors, guided by these principles:</p>
+            <p>Creativity, Logic, Collaboration, and Honor."</p>
         </div>
         
         <div class="flip-cards-container">
@@ -175,7 +169,7 @@
                         Logic
                     </div>
                     <div class="flip-card-back">
-                        <p>"I  apply logic as an analogy: just as a musician uses scales and harmonies to evoke emotions, I analyze how various visual elements work together to create an emotional impact. By understanding how people perceive and react to art, I can craft pieces that resonate deeply and meaningfully with viewers."</p>
+                        <p>"I apply logic as an analogy: just as a musician uses scales and harmonies to evoke emotions, I analyze how various visual elements work together to create an emotional impact. By understanding how people perceive and react to art, I can craft pieces that resonate deeply and meaningfully with viewers."</p>
                     </div>
                 </div>
             </div>
@@ -198,6 +192,7 @@
                     </div>
                     <div class="flip-card-back">
                        <p>"Honor is achieved by making a significant contribution in your own way and showing equal respect for others' individual ideas, opinions, and beliefs."</p>
+                    </div>
                 </div>
             </div>
         </div>

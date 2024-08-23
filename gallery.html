@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            background-color:rgb(0, 0, 0);
+            background-color: rgb(0, 0, 0);
         }
 
         .header {
@@ -21,14 +21,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: transparent;
-
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: Set a background color */
         }
 
         h1 {
             margin: 0;
-            color:white;
-            
+            color: white;
         }
 
         .home-btn {
@@ -39,7 +37,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            font-weight:bold;
+            font-weight: bold;
         }
 
         .home-btn:hover {
@@ -88,8 +86,8 @@
 
         .close {
             position: absolute;
-            top: 80px;
-            right: 100px;
+            top: 20px;
+            right: 20px;
             color: #fff;
             font-size: 40px;
             font-weight: bold;
@@ -105,8 +103,8 @@
 
         #caption { 
             font-size: 1.8rem;
-            margin:10px;
-            text-align:center;
+            margin: 10px;
+            text-align: center;
             color: #fff;
         }
     </style>
@@ -114,48 +112,14 @@
 <body>
     <div class="header">
         <h1>Gallery</h1>
-        <a href="home.html" class="button" id="soundButton">
-        <button class="home-btn" onclick="goHome()">Back to Space</button></a>
+        <a href="home.html" class="home-btn" id="soundButton">Back to Space</a>
     </div>
     <div class="gallery">
         <div class="gallery-item">
-            <img src="../dada/Gallery/horse acrylic.jpg" alt="Iconic Sarao Jeepney Horse. Acrylic on Canvas.">
+            <img src="Gallery/horse acrylic.jpg" alt="Iconic Sarao Jeepney Horse. Acrylic on Canvas.">
         </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/Sunset-somewhere.png" alt="Sunset in Puerto Vallarta, Mexico. Acrylic on Canvas.">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/Port-of-PuertoRico.png" alt="My Recall of Port Entry. San Juan, Puerto Rico.">
-        </div>
-        <div class="gallery-item">
-            <img src="photo4.jpg" alt="Photo 4">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/self portrait.jpg" alt="Self Portrait. Pencil on Paper.">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/tomato acrylic.jpg" alt="Tomatoes. Acrylic on Chopping Board.">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/Peppers.jpg" alt="Peppers. Acrylic on Chopping Board.">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/fish acrylic.jpg" alt="Fish. Acrylic on Chopping Board.">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/flea shirt.jpg" alt="RHCP-Flea, Get a kick... Digital Illustration">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/tony halk shirt.jpg" alt="Skate-Tony Halk, Get a kick... Digital Illustration">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/snoop shirt.jpg" alt="Snoop & Buddha, People are naturally... Digital Illustration">
-        </div>
-        <div class="gallery-item">
-            <img src="../dada/Gallery/JerryCorrea logo.jpg" alt="My Signature-Anaglyph on shirt. Digital Illustration">
-        </div>
+        <!-- Add more gallery items as needed -->
     </div>
-
     <div id="modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-img">
@@ -200,7 +164,8 @@
         }
 
         // Function to handle "Home" button click
-        function goHome() {
+        function goHome(event) {
+            event.preventDefault(); // Prevent default link behavior
             const sound = document.getElementById('home-sound');
             sound.play();
             // You can add additional home navigation logic here if needed

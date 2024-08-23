@@ -11,9 +11,9 @@
         /* Styles directly in HTML (consider moving to external CSS) */
         header {
             font-family: system-ui, 'Segoe UI', 'Open Sans';
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #cac9cf;
+            color: #ffffff;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
@@ -24,14 +24,16 @@
             font-size: 2.5rem;
             text-align: center;
             margin: 20px 100px 50px 100px;
-            color: #04f825;
-            background: #1a0585;
-            background-image: url("../Background-Layout/galaxy.symetric.jpg");
+            background: #060120;
+        
         }
 
         a:hover {
             animation: glow 1s ease-in-out infinite alternate;
             color: #f0f0f0;
+        }
+        a { color:#38ff45;
+
         }
 
         p {
@@ -42,33 +44,33 @@
             border: 70px solid transparent;
         }
 
-        p, h1, h2, footer {
+        header, h2, footer { color:#ff38f2;
             animation: glow 4s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px #0c00a7, 0 0 20px #0228ff, 0 0 30px #070142,
-                             0 0 40px #010435, 0 0 50px #050453, 0 0 60px #040529, 0 0 70px #202020;
+                text-shadow: 0 0 10px #0c00a7, 0 0 20px #0228ff, 0 0 30px #6150db,
+                             0 0 40px #2a30a8, 0 0 50px #3e3cb9, 0 0 60px #2e33b6, 0 0 70px #491cc7;
             }
             to {
                 text-shadow: 0 0 20px #7173da, 0 0 30px #4122ce, 0 0 40px #2c1bc7,
-                             0 0 50px #080a86, 0 0 60px #0f0e6d, 0 0 70px #111553, 0 0 80px #1c1a30;
+                             0 0 50px #080a86, 0 0 60px #0f0e6d, 0 0 70px #2931a8, 0 0 80px #4d42bd;
             }
         }
 
         #myDIV {
-            background: #4c00ff;
+            background: #3e01cc;
             animation: mymove 4s infinite;
             border-radius: 20px;
-            border: 4px solid #002fff;
+            border: 10px solid #4538ff;
         }
 
         @keyframes mymove {
-            25% { background-color: #252c9bf5; }
-            50% { background-color: #3b219cd0; }
-            75% { background-color: #392591; }
-            100% { background-color: #2f2583f1; }
+            25% { background-color: #020da8f5; }
+            50% { background-color: #210391d0; }
+            75% { background-color: #1e0397; }
+            100% { background-color: #100292f1; }
         }
 
         .transition {
@@ -77,7 +79,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #014058;
+            background-color: #6d6b6c;
             z-index: 9999;
             transition: ease-in-out;
             opacity: 0;
@@ -93,7 +95,7 @@
     <header>
         <section>
             <div id="transition" class="transition"></div>
-            <audio id="aboutAudio" src="../Sound/PortalButtonEntry2.mp3"></audio>
+            <audio id="aboutAudio" src="../dada/Sound/PortalButtonEntry2.mp3"></audio>
             <a href="about.html" id="aboutLink">About</a>
             <a href="#projects">Skills</a>
             <a href="#contact">Contacts</a>
@@ -101,8 +103,8 @@
     </header>
 
     <p>
-        <audio id="audioPlayer1" src="../Sound/typing101.wav" preload="auto"></audio>
-        <audio id="audioPlayer2" src="../Sound/Lost in space.mp3" preload="auto"></audio>
+        <audio id="audioPlayer1" src="../dada/Sound/typing101.wav" preload="auto"></audio>
+        <audio id="audioPlayer2" src="../dada/Sound/Lost in space.mp3" preload="auto"></audio>
         <a id="playLink">Hover to play</a>
     </p>
 

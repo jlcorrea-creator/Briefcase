@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            background-color: rgb(0, 0, 0);
+            background-color:rgb(0, 0, 0);
         }
 
         .header {
@@ -21,12 +21,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: Set a background color */
+            background-color: transparent;
+
         }
 
         h1 {
             margin: 0;
-            color: white;
+            color:#ff00dd;
+            font-size:2.5rem;
+           
         }
 
         .home-btn {
@@ -37,14 +40,15 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            font-weight: bold;
+            font-weight:bold;
         }
 
         .home-btn:hover {
             background-color: #0056b3;
         }
 
-        .gallery {
+        .gallery { font-size: 1.2rem;
+            color:white;
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* 4 columns */
             gap: 10px;
@@ -86,8 +90,8 @@
 
         .close {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 80px;
+            right: 100px;
             color: #fff;
             font-size: 40px;
             font-weight: bold;
@@ -101,43 +105,88 @@
             cursor: pointer;
         }
 
-        #caption { 
+        #caption {
             font-size: 1.8rem;
-            margin: 10px;
-            text-align: center;
+            margin:10px;
+            text-align:center;
             color: #fff;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Gallery</h1>
-        <a href="home.html" class="home-btn" id="soundButton">Back to Space</a>
+        <h1>Visual Art</h1>
+        <a href="home.html" class="button" id="soundButton">
+        <button class="home-btn" onclick="goHome()">Back to Space</button></a>
     </div>
-    <div class="gallery">
+    <div class="gallery">Digital Art: This section features creativity through digital mediums, including digital painting, illustration, and graphic design.
+
+
         <div class="gallery-item">
-            <img src="Gallery/horse acrylic.jpg" alt="Iconic Sarao Jeepney Horse. Acrylic on Canvas.">
+            <img src="../dada/Gallery/flea shirt.jpg" alt="RHCP-Flea, Get a kick... Digital Illustration">
         </div>
-        <!-- Add more gallery items as needed -->
+        <div class="gallery-item">
+            <img src="../dada/Gallery/tony halk shirt.jpg" alt="Skate-Tony Halk, Get a kick... Digital Illustration">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/snoop shirt.jpg" alt="Snoop & Buddha, People are naturally... Digital Illustration">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/JerryCorrea logo.jpg" alt="My Signature-Anaglyph on shirt. Digital Illustration">
+        </div>
+    </div><br>
+    <div class="gallery">Freehand Art: This section demonstrates an artist’s perspective through a direct, intuitive approach in drawing, painting, and sculpture. Freehand techniques reveal a personal touch and vision, showcasing unique style and creative process.
+        <div class="gallery-item">
+            <img src="../dada/Gallery/horse acrylic.jpg" alt="Iconic Sarao Jeepney Horse. Acrylic on Canvas.">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/Sunset-somewhere.png" alt="Sunset in Puerto Vallarta, Mexico. Acrylic on Canvas.">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/Port-of-PuertoRico.png" alt="My Recall of Port Entry. San Juan, Puerto Rico.">
+        </div>
+        <div class="gallery-item">
+            <img src="photo4.jpg" alt="Photo 4">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/self portrait.jpg" alt="Self Portrait. Pencil on Paper.">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/tomato acrylic.jpg" alt="Tomatoes. Acrylic on Chopping Board.">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/Peppers.jpg" alt="Peppers. Acrylic on Chopping Board.">
+        </div>
+        <div class="gallery-item">
+            <img src="../dada/Gallery/fish acrylic.jpg" alt="Fish. Acrylic on Chopping Board.">
+        </div>
     </div>
+
+
     <div id="modal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="modal-img">
         <div id="caption"></div>
     </div>
 
-    <audio id="home-sound" src="../Sound/Clap-Snap.WAV"></audio>
+
+    <audio id="soundButton" src="../Sound/Clap-Snap.WAV"></audio>
+
 
     <script>
+
         // Get the modal
         const modal = document.getElementById('modal');
+
 
         // Get the image and insert it inside the modal
         const modalImg = document.getElementById('modal-img');
         const captionText = document.getElementById('caption');
 
+
         // Get all the gallery images
         const galleryImages = document.querySelectorAll('.gallery-item img');
+
 
         // Loop through all images
         galleryImages.forEach(img => {
@@ -148,13 +197,16 @@
             }
         });
 
+
         // Get the <span> element that closes the modal
         const closeBtn = document.getElementsByClassName('close')[0];
+
 
         // When the user clicks on <span> (x), close the modal
         closeBtn.onclick = function() {
             modal.style.display = 'none';
         }
+
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
@@ -163,14 +215,9 @@
             }
         }
 
-        // Function to handle "Home" button click
-        function goHome(event) {
-            event.preventDefault(); // Prevent default link behavior
-            const sound = document.getElementById('home-sound');
-            sound.play();
-            // You can add additional home navigation logic here if needed
-            window.location.href = 'index.html'; // Adjust the URL to your home page
-        }
     </script>
 </body>
 </html>
+
+
+

@@ -44,7 +44,7 @@
             border: 70px solid transparent;
         }
 
-        header, h2, footer { color:#ff38f2;
+        header, h2, footer { color:#ff02ee;
             animation: glow 4s ease-in-out infinite alternate;
         }
 
@@ -126,9 +126,43 @@
         </section>
         <section id="projects" class="projects">
             <h2>Portals</h2>
-            <p><a href="gallery.html" target="_blank">Static Gateway</a></p>
-            <p><a href="screen.html" target="_blank">Dynamic Gateway</a></p>
+            <p><a href="gallery.html" class="button" id="soundButton">Static Gateway</a></p>
+            <p><a href="screen.html" class="button" id="soundButton">Dynamic Gateway</a></p>
         </section>
+        <style>
+             .button {
+            background-color:transparent;
+            color: #38ff45;
+            border: none;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #6200ff;
+        }
+        .button:active {
+            background-color: navy;
+        }
+        .button:focus {
+            outline: 4px solid white;
+        }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const button = document.getElementById('soundButton');
+                const sound = new Audio("../Sound/PortalButtonEntry.wav"); // Adjust the path as needed
+        
+                button.addEventListener('click', () => {
+                    sound.play();
+                });
+            });
+        </script>
     </div>
 
     <footer>  

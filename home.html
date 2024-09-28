@@ -14,7 +14,6 @@
             font-size: 2.5rem;
             font-weight: bold;
             color: #ffffff;
-            text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -22,17 +21,19 @@
         body {
             font-family: 'Space Mono', monospace;
             font-size: 2.5rem;
+            text-decoration: none;
             text-align: center;
             margin: 20px 100px 50px 100px;
             background: #060120;
-        
+            background-image: url(../Briefcase/Background-Layout/space.jpg);
+            background-repeat: no-repeat;
         }
 
         a:hover {
             animation: glow 1s ease-in-out infinite alternate;
             color: #f0f0f0;
         }
-        a { color:#38ff45;
+        a { color:#00f7ff;
 
         }
 
@@ -41,10 +42,10 @@
             color: #f0f0f0;
             text-align: center;
             line-height: 1.3; /* Changed from 0.3 for better readability */
-            border: 70px solid transparent;
+            border: 50px solid transparent;
         }
 
-        header, h2, footer { color:#ff02ee;
+        header, h2, footer { color:#ff02f2;
             animation: glow 4s ease-in-out infinite alternate;
         }
 
@@ -60,17 +61,17 @@
         }
 
         #myDIV {
-            background: #3e01cc;
-            animation: mymove 4s infinite;
+            background: #0b0163f1;
+            animation: mymove 8s infinite;
             border-radius: 20px;
-            border: 10px solid #4538ff;
+            border: 10px solid #2f00ff;
         }
 
         @keyframes mymove {
             25% { background-color: #020da8f5; }
-            50% { background-color: #210391d0; }
+            50% { background-color: transparent; }
             75% { background-color: #1e0397; }
-            100% { background-color: #100292f1; }
+            100% { background-color: #0b0163f1; }
         }
 
         .transition {
@@ -87,7 +88,7 @@
         }
 
         .transition.active {
-            opacity: .7;
+            opacity: .8;
         }
     </style>
 </head>
@@ -95,7 +96,7 @@
     <header>
         <section>
             <div id="transition" class="transition"></div>
-            <audio id="aboutAudio" src="../dada/Sound/PortalButtonEntry2.mp3"></audio>
+            <audio id="aboutAudio" src="../Briefcase/Sound/PortalButtonEntry2.mp3"></audio>
             <a href="about.html" id="aboutLink">About</a>
             <a href="#projects">Skills</a>
             <a href="#contact">Contacts</a>
@@ -103,8 +104,8 @@
     </header>
 
     <p>
-        <audio id="audioPlayer1" src="../dada/Sound/typing101.wav" preload="auto"></audio>
-        <audio id="audioPlayer2" src="../dada/Sound/Lost in space.mp3" preload="auto"></audio>
+        <audio id="audioPlayer1" src="../Briefcase/Sound/typing101.wav" preload="auto"></audio>
+        <audio id="audioPlayer2" src="../Briefcase/Sound/Lost in space.mp3" preload="auto"></audio>
         <a id="playLink">Hover to play</a>
     </p>
 
@@ -126,13 +127,13 @@
         </section>
         <section id="projects" class="projects">
             <h2>Portals</h2>
-            <p><a href="gallery.html" class="button" id="soundButton">Static Gateway</a></p>
-            <p><a href="screen.html" class="button" id="soundButton">Dynamic Gateway</a></p>
+            <p><a href="gallery.html" class="button">Static Gateway</a></p>
+            <p><a href="screen.html" class="button">Dynamic Gateway</a></p>
         </section>
         <style>
              .button {
             background-color:transparent;
-            color: #38ff45;
+            color: #0be603;
             border: none;
             padding: 0.5rem 1rem;
             text-align: center;
@@ -144,25 +145,11 @@
             transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #6200ff;
+            background-color: transparent;
         }
-        .button:active {
-            background-color: navy;
-        }
-        .button:focus {
-            outline: 4px solid white;
-        }
-        </style>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const button = document.getElementById('soundButton');
-                const sound = new Audio("../Sound/PortalButtonEntry.wav"); // Adjust the path as needed
         
-                button.addEventListener('click', () => {
-                    sound.play();
-                });
-            });
-        </script>
+        </style>
+       
     </div>
 
     <footer>  
@@ -236,7 +223,7 @@
             transition.classList.add('active');
             setTimeout(() => {
                 window.location.href = event.target.href;
-            }, audio.duration * 200); // Wait until the audio has finished
+            }, audio.duration * 210); // Wait until the audio has finished
         });
     </script>
 </body>

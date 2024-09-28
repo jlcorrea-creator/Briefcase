@@ -102,9 +102,9 @@
             animation: glow 2s ease-in-out infinite alternate;
         }
         @keyframes glow {
-            100% { background: #021174f5; }
-            75% { background: #4d01ffd0; }
-            25% { background: #51015cd0; }
+            100% { background: #0224fff5; }
+            75% { background: #6201ffd0; }
+            25% { background: #c300ffd0; }
         }
         .audio-element {
             display: none;
@@ -113,26 +113,19 @@
 </head>
 <header>
     <h1>About</h1>
-    <a class="header-button" href="home.html" onclick="playAudio();">
-        Return to Space
-    </a>
+    <a class="header-button" href="home.html">Return to Space</a>
 </header>
 
-<!-- Audio element -->
-<audio id="audio-player" class="audio-element">
-    <source src="../Sound/Clap-Snap.WAV" type="audio/wav">
-    Your browser does not support the audio element.
-</audio>
-
 <script>
-    function playAudio() {
-        var audio = document.getElementById('audio-player');
-        audio.play();
-        // Delay the navigation to allow the audio to start playing
-        setTimeout(function() {
-            window.location.href = 'home.html';
-        }, 100); // Adjust the delay as needed
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        // Background music
+        const backgroundMusic = new Audio("../Briefcase/Sound/MyAboutBG2.wav"); // Replace with your background music file
+        backgroundMusic.loop = true; // Loop the background music
+        backgroundMusic.play().catch(error => {
+            console.error("Background music playback failed:", error);
+        });
+
+    });
 </script>
     <div class="main-container">
         <div class="container">

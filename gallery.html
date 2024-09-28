@@ -44,7 +44,7 @@
         }
 
         .home-btn:hover {
-            background-color: #0056b3;
+            background-color: rgb(76, 0, 139);
         }
 
         .gallery { font-size: 1.2rem;
@@ -116,7 +116,7 @@
 <body>
     <div class="header">
         <h1>Visual Art</h1>
-        <a href="home.html" class="button" id="soundButton">
+        <a href="home.html" class="button">
         <button class="home-btn" onclick="goHome()">Back to Space</button></a>
     </div>
     <div class="gallery">Digital Art: This section features creativity through digital mediums, including digital painting, illustration, and graphic design.
@@ -170,11 +170,17 @@
     </div>
 
 
-    <audio id="soundButton" src="../Sound/Clap-Snap.WAV"></audio>
-
-
     <script>
-
+        document.addEventListener('DOMContentLoaded', () => {
+        // Background music
+        const backgroundMusic = new Audio("../Briefcase/Sound/MyAboutBG.wav"); // Replace with your background music file
+            backgroundMusic.loop = true; // Loop the background music
+            backgroundMusic.play().catch(error => {
+            console.error("Background music playback failed:", error);
+            });
+    
+        });
+   
         // Get the modal
         const modal = document.getElementById('modal');
 

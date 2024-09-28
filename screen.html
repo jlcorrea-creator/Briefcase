@@ -107,15 +107,17 @@
         <iframe src="https://drive.google.com/file/d/1breRG2JtBhUjAOvjsJ0wtU1TJHm87-AH/preview" frameborder="0" allowfullscreen></iframe>
         <p>This time, I created a 2D animation on a smartphone—imagine doing that on a 7-inch phone.</p>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.getElementById('soundButton');
-            const sound = new Audio("../Sound/clap-Snap.WAV"); // Adjust the path as needed
-    
-            button.addEventListener('click', () => {
-                sound.play();
-            });
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Background music
+        const backgroundMusic = new Audio("../Briefcase/Sound/.mp3"); // Replace with your background music file
+        backgroundMusic.loop = true; // Loop the background music
+        backgroundMusic.play().catch(error => {
+            console.error("Background music playback failed:", error);
         });
-    </script>
+
+    });
+</script>
+
 </body>
 </html>

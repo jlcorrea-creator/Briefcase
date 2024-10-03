@@ -24,8 +24,9 @@
             animation: glow 1s ease-in-out infinite alternate;
             color: #f0f0f0;
         }
-        a { color:#0be603;
 
+        a { 
+            color: #0be603;
         }
 
         p {
@@ -36,7 +37,8 @@
             border: 20px solid transparent;
         }
 
-        header, h2, footer,div { color:#02ccff;
+        header, h2, footer, div { 
+            color: #02ccff;
             animation: glow 4s ease-in-out infinite alternate;
         }
 
@@ -51,13 +53,11 @@
             }
         }
 
-        #myDIV,div {
+        #myDIV, div {
             background: #0b0163f1;
             animation: mymove 8s infinite;
             border-radius: 10px;
-            border: solid  #2600ff;
-        
-        
+            border: solid #2600ff;
         }
 
         @keyframes mymove {
@@ -82,56 +82,99 @@
 
         .transition.active {
             opacity: .8;
-       }
+        }
         
-       img {
-          
-           justify-content: center;
-           align-items: center;
-           height: 80vh;
-           background-color: transparent;
-           image-resolution: 300;
+        img {
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-color: transparent;
+            image-resolution: 300;
+        }
+
+        /* Sticky navigation styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #060120; /* Match the background color */
+            padding: 10px 0; /* Add some padding */
+            z-index: 1000; /* Ensure it’s above other content */
+        }
+
+        .navbar a {
+            margin: 0 15px; /* Space between links */
+            color: #0be603; /* Link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.5rem; /* Adjust size for better mobile view */
+        }
+
+        .navbar a:hover {
+            animation: glow 1s ease-in-out infinite alternate; /* Keep hover effect */
+            color: #f0f0f0; /* Change color on hover */
+        }
+
+        /* Mobile optimization styles */
+        @media (max-width: 768px) {
+            body {
+                margin: 20px 10px; /* Reduce margins */
+                font-size: 1.5rem; /* Smaller font for mobile */
+            }
+
+            .navbar {
+                padding: 10px; /* Adjust padding */
+            }
+
+            .navbar a {
+                font-size: 1.2rem; /* Smaller link size */
+            }
+
+            p {
+                font-size: 1.5rem; /* Adjust paragraph font size */
+            }
         }
     </style>
 </head>
+<body>
     <header>
-            <div id="transition" class="transition"></div>
-            <audio id="aboutAudio" src="../Briefcase/Sound/PortalButtonEntry2.mp3"></audio>
+        <div id="transition" class="transition"></div>
+        <audio id="aboutAudio" src="../Briefcase/Sound/PortalButtonEntry2.mp3"></audio>
+        <nav id="navbar" class="navbar">
             <a href="about.html" id="aboutLink">About</a>
             <a href="#projects">Skills</a>
             <a href="#contact">Contacts</a>
+        </nav>
     </header>
-<body>
+    
     <div id="myDIV" class="myDIV">
-    <p> 
-        <audio id="audioPlayer1" src="../Briefcase/Sound/typing101.wav" preload="auto"></audio>
-        <audio id="audioPlayer2" src="../Briefcase/Sound/Lost in space.mp3" preload="auto"></audio>
-        <a id="playLink">Hover to play</a>
-    </p>
-    <img src="../Briefcase/Gallery/face.1.illuminate.png" class="fade-element" alt="Sample Image">
+        <p> 
+            <audio id="audioPlayer1" src="../Briefcase/Sound/typing101.wav" preload="auto"></audio>
+            <audio id="audioPlayer2" src="../Briefcase/Sound/Lost in space.mp3" preload="auto"></audio>
+            <a id="playLink">Hover to play</a>
+        </p>
+        <img src="../Briefcase/Gallery/face.1.illuminate.png" class="fade-element" alt="Sample Image">
         <nav id="navbar" class="nav">
             <!-- Navigation content -->
         </nav>
         <!-- START WELCOME SECTION -->
-            <p>"In this experience,</p>
-            <p>anything your senses perceive</p>  
-            <p>is a figment of</p>
-            <p>my imagination."</p>
-            <p>Your appreciation</p>
-            <p>depends on your taste</p>
-            <p>and the smells</p>
-            <p>that surround you.</p>
-            <p>Do you feel me?"</p>
+        <p>"In this experience,</p>
+        <p>anything your senses perceive</p>  
+        <p>is a figment of</p>
+        <p>my imagination."</p>
+        <p>Your appreciation</p>
+        <p>depends on your taste</p>
+        <p>and the smells</p>
+        <p>that surround you.</p>
+        <p>Do you feel me?"</p>
     </div>
    
-            <h2 id="projects" class="projects">Portals</h2>
+    <h2 id="projects" class="projects">Portals</h2>
     <div>
-            <a href="gallery.html" class="button">[Static Gateway]</a>
-            <a href="screen.html" class="button">[Dynamic Gateway]</a>
+        <a href="gallery.html" class="button">[Static Gateway]</a>
+        <a href="screen.html" class="button">[Dynamic Gateway]</a>
     </div>
-        <style>
-             .button {
-            background-color:transparent;
+    <style>
+        .button {
+            background-color: transparent;
             color: #0be603;
             border: none;
             padding: 0.5rem 1rem;
@@ -147,9 +190,9 @@
             background-color: transparent;
         }
 
-       .fade-element {
-             opacity: 0; /* Start hidden */
-             animation: fadeInOut 8s infinite; /* Adjust duration as needed */
+        .fade-element {
+            opacity: 0; /* Start hidden */
+            animation: fadeInOut 8s infinite; /* Adjust duration as needed */
         }
 
         @keyframes fadeInOut {
@@ -163,7 +206,7 @@
                 opacity: .1; /* Fade out to fully transparent */
             }
         }
-        </style>
+    </style>
 
     <footer>  
         <h2 id="contact" class="contact">Contacts</h2> 
